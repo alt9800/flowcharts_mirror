@@ -92,7 +92,7 @@ para(path2, top)->op1</div>
 
         // Setup the editor diagram
         var editor = ace.edit(editor_div.get(0));
-        editor.setTheme("ace/theme/crimson_editor");
+        editor.setTheme("ace/theme/Dawn");
         editor.getSession().setMode("ace/mode/asciidoc");
         editor.getSession().on('change', _.debounce(on_change, 100));
 
@@ -144,23 +144,6 @@ para(path2, top)->op1</div>
             projectId: '8166472e-7ac6-44e5-a53f-96a6ca165e2b'
           }
         };
-/*         window.i18next
-          .use(window.i18nextLocizeBackend)
-          .use(window.i18nextBrowserLanguageDetector)
-          .init(i18nextOptions, function (err) {
-            window.jqueryI18next.init(window.i18next, $, {
-              tName: 't', // --> appends $.t = i18next.t
-              i18nName: 'i18n', // --> appends $.i18n = i18next
-              handleName: 'localize', // --> appends $(selector).localize(opts);
-              selectorAttr: 'data-i18n', // selector for translating elements
-              targetAttr: 'i18n-target', // data-() attribute to grab target element to translate (if diffrent then itself)
-              optionsAttr: 'i18n-options', // data-() attribute that contains options, will load/set if useOptionsAttr = true
-              useOptionsAttr: true, // see optionsAttr
-              parseDefaultValueFromContent: true // parses default values from content ele.val or ele.text
-            });
-
-            $('body').localize();
-          }); */
       });
     </script>
   </body>
