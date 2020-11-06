@@ -34,7 +34,8 @@
             <td style="vertical-align: top;">
             <h3 style="font-size: 12px; margin: 0px">テンプレを参考にレシピを入力してね。</h3>
             <div class="editor-wrapper">
-<div class="editor editor1">st=>start: Start:>http://www.google.com[blank]
+            <div class="editor editor1">
+st=>start: Start:>http://www.google.com[blank]
 e=>end:>http://www.google.com
 op1=>operation: My Operation
 sub1=>subroutine: My Subroutine
@@ -108,20 +109,7 @@ para(path2, top)->op1</div>
             diagram_div.html('');
 
             // Draw
-            if (nr === 1 || nr === 3 || nr === 4) {
-              diagram.drawSVG(diagram_div.get(0));
-            } else if (nr === 2) {
-              diagram.drawSVG(diagram_div.get(0), {
-                'flowstate' : {
-                  'past' : { 'fill' : '#CCCCCC', 'font-size' : 12},
-                  'current' : {'fill' : 'yellow', 'font-color' : 'red', 'font-weight' : 'bold'},
-                  'future' : { 'fill' : '#FFFF99'},
-                  'invalid': {'fill' : '#444444'},
-                  'approved' : { 'fill' : '#58C4A3', 'font-size' : 12, 'yes-text' : 'APPROVED', 'no-text' : 'n/a' },
-                  'rejected' : { 'fill' : '#C45879', 'font-size' : 12, 'yes-text' : 'n/a', 'no-text' : 'REJECTED' }
-                }
-              });
-            }
+            diagram.drawSVG(diagram_div.get(0));
 
           } catch(err) {
             var annotation = {
